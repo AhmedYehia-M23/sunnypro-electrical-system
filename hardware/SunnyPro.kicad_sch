@@ -1,0 +1,419 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ee979767-e9d7-4ee1-bb90-af4cf59ca603")
+	(paper "A4")
+	(title_block
+		(title "SunnyPro")
+		(date "2026-05-23")
+		(comment 1 "Author: Ahmed Yehia")
+	)
+	(lib_symbols)
+	(rectangle
+		(start 90.17 50.8)
+		(end 90.17 50.8)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "d4635eeb-d116-4b07-983f-c8040b5dd08c")
+	)
+	(text "SunnyPro"
+		(exclude_from_sim no)
+		(at 149.86 18.034 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+			)
+		)
+		(uuid "7166bb44-8cd4-4d94-8f2d-efe10a18ebcd")
+	)
+	(sheet
+		(at 15.24 88.9)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "211c6a7c-23b4-401c-92df-6a4140a3a16f")
+		(property "Sheetname" "TOP_IR_HEATING_SUBSYSTEM"
+			(at 20.574 88.773 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "TOP_IR_HEATING_SUBSYSTEM.kicad_sch"
+			(at 15.24 128.2196 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 83.82 35.56)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2ff78112-f683-4cfd-9562-20e499bfd0d6")
+		(property "Sheetname" "MCU"
+			(at 117.221 35.433 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 83.82 74.803 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 187.96 122.555)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "30c9417b-70ac-4ebd-ad6a-e7e4eafd0d71")
+		(property "Sheetname" "EGG_BREAKING_STORAGE"
+			(at 220.853 122.428 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Sheetfile" "EGG_BREAKING_STORAGE.kicad_sch"
+			(at 187.833 161.798 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.875 35.56)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3c045f7a-79a3-4902-be0a-4bb4b9ce6433")
+		(property "Sheetname" "POWER"
+			(at 49.403 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Sheetfile" "POWER.kicad_sch"
+			(at 15.748 75.057 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 143.51)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "46e88da0-25fe-4878-aaf3-b5e631e2ef7a")
+		(property "Sheetname" "PERIPHERALS"
+			(at 101.346 143.383 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PERIPHERALS.kicad_sch"
+			(at 82.55 182.8296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 88.9)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "55be921b-3ee4-4e71-a887-410fcb97d973")
+		(property "Sheetname" "BOTTOM_HEATING_SUBSYSTEM"
+			(at 86.868 88.773 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BOTTOM_HEATING_SUBSYSTEM.kicad_sch"
+			(at 82.55 128.2196 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 187.96 61.595)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "94e27424-837b-4bea-997f-6c15116c015d")
+		(property "Sheetname" "CONVEYOR_TRANSPORTATION_SYSTEM"
+			(at 185.928 61.214 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CONVEYOR_TRANSPORTATION_SUBSYSTEM.kicad_sch"
+			(at 187.833 100.711 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.24 143.51)
+		(size 66.04 38.735)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cb40071b-146d-467f-9023-32a055f639e9")
+		(property "Sheetname" "ROTATING_PLATE"
+			(at 31.242 143.383 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ROTATING_PLATE.kicad_sch"
+			(at 15.24 182.8296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SunnyPro"
+				(path "/ee979767-e9d7-4ee1-bb90-af4cf59ca603"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

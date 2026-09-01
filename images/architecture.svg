@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <style>.b{fill:#fafafa;stroke:#222;stroke-width:2;rx:12;ry:12}.h{font:700 21px Arial,sans-serif}.t{font:15px Arial,sans-serif;fill:#333}.a{stroke:#555;stroke-width:2.5;fill:none;marker-end:url(#m)}</style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#555"/></marker></defs>
+  <text x="600" y="35" text-anchor="middle" class="h">SunnyPro Electrical System Architecture</text>
+  <rect x="465" y="250" width="270" height="145" class="b"/><text x="600" y="292" text-anchor="middle" class="h">STM32H743 MCU</text><text x="600" y="325" text-anchor="middle" class="t">GPIO · SPI · UART · PWM</text><text x="600" y="352" text-anchor="middle" class="t">sensor &amp; actuator coordination</text>
+  <rect x="70" y="75" width="250" height="120" class="b"/><text x="195" y="115" text-anchor="middle" class="h">Power System</text><text x="195" y="148" text-anchor="middle" class="t">AC protection · 24/12/6/5/3.3 V</text><text x="195" y="175" text-anchor="middle" class="t">fusing · regulation · E-stop</text>
+  <rect x="70" y="260" width="250" height="120" class="b"/><text x="195" y="300" text-anchor="middle" class="h">Heating</text><text x="195" y="333" text-anchor="middle" class="t">PT100 + MAX31865</text><text x="195" y="360" text-anchor="middle" class="t">SSR-controlled heaters</text>
+  <rect x="70" y="445" width="250" height="120" class="b"/><text x="195" y="485" text-anchor="middle" class="h">Storage / Breaking</text><text x="195" y="518" text-anchor="middle" class="t">IR sensors · solenoids · servo</text><text x="195" y="545" text-anchor="middle" class="t">MOSFET inductive-load drivers</text>
+  <rect x="880" y="75" width="250" height="120" class="b"/><text x="1005" y="115" text-anchor="middle" class="h">Conveyor</text><text x="1005" y="148" text-anchor="middle" class="t">stepper drive · home sensor</text><text x="1005" y="175" text-anchor="middle" class="t">encoder feedback</text>
+  <rect x="880" y="260" width="250" height="120" class="b"/><text x="1005" y="300" text-anchor="middle" class="h">Rotating Plate</text><text x="1005" y="333" text-anchor="middle" class="t">stepper · home switch</text><text x="1005" y="360" text-anchor="middle" class="t">load cell + HX711</text>
+  <rect x="880" y="445" width="250" height="120" class="b"/><text x="1005" y="485" text-anchor="middle" class="h">Peripherals / HMI</text><text x="1005" y="518" text-anchor="middle" class="t">pump · display · serial interface</text>
+  <path d="M320 135 C410 135 420 275 465 295" class="a"/><path d="M320 320 H465" class="a"/><path d="M320 505 C410 505 420 380 465 360" class="a"/>
+  <path d="M735 295 C790 275 800 135 880 135" class="a"/><path d="M735 320 H880" class="a"/><path d="M735 360 C790 380 800 505 880 505" class="a"/>
+</svg>
