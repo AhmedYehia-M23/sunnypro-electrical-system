@@ -2,7 +2,7 @@
 
 **STM32H743 · KiCad · hierarchical schematics · sensing · heating · motion control · protected multi-rail power**
 
-Electrical architecture and complete KiCad schematic design for an automated food-service machine. I was responsible for the **electrical architecture and every electrical schematic published in this repository**, including MCU I/O planning, power distribution, temperature measurement, heater control, motor/encoder interfaces, load-cell measurement, actuator drivers, component selection, power calculations and BOM development.
+Electrical architecture and KiCad schematic design for an automated food-service machine developed as an HSRW group project. My scope was the **electrical architecture and the electrical schematics published in this repository**: MCU I/O planning, power distribution, temperature measurement, heater control, motor/encoder interfaces, load-cell measurement, actuator drivers and component selection.
 
 | | |
 |---|---|
@@ -11,7 +11,6 @@ Electrical architecture and complete KiCad schematic design for an automated foo
 | **Power rails** | 24 V · 12 V · 6 V · 5 V · 3.3 V |
 | **Sensing** | PT100/MAX31865 · HX711 load cell · IR sensors · home switches |
 | **Actuation** | SSR heaters · TB6600/NEMA17 · ULN2003A/28BYJ-48 · MOSFET solenoids/pumps · servo |
-| **My scope** | electrical architecture · all schematics · I/O planning · component selection · power calculations · BOM |
 | **Academic context** | HSRW Group Project · Summer Semester 2026 |
 
 ![SunnyPro electrical architecture](images/architecture.svg)
@@ -21,83 +20,69 @@ Electrical architecture and complete KiCad schematic design for an automated foo
 - [Full schematic PDF](exports/SunnyPro-schematics.pdf)
 - [KiCad source](hardware/)
 - [Design summary](docs/design-summary.md)
-- [Ownership statement](SOURCE_OWNERSHIP.md)
+- [Power architecture notes](docs/power-architecture.md)
+- [Key component selection](docs/key-components.md)
+- [Contribution statement](SOURCE_OWNERSHIP.md)
 
-> **Ownership boundary:** SunnyPro was a university group project. The electrical architecture and all electrical schematics shown in this repository were my individual responsibility. This repository does not claim authorship of mechanical, software or other team work.
+> SunnyPro was a university group project. This repository covers my electrical-design contribution; it does not claim authorship of the team's mechanical or software work.
 
-## Electrical Design Responsibility
+## Electrical design scope
 
-I developed the architecture from subsystem requirements and created the complete hierarchical schematic set myself. My work included:
+The electrical work published here includes:
 
-- Complete hierarchical electrical architecture
-- All electrical schematics in the repository
+- hierarchical system architecture
 - MCU I/O planning and signal allocation
-- Power-demand calculations and rail planning
-- Component selection
-- Protection and safety design
-- Sensor and actuator interface design
-- Heating-control electronics
-- Motor/encoder interfaces
-- Load-cell measurement interface
-- Bill of materials development
-- Organization of the system into maintainable subsystem sheets
+- protected AC input and DC rail architecture
+- temperature-sensing and heater-control interfaces
+- motor, encoder and home-sensor interfaces
+- load-cell measurement interface
+- MOSFET-switched actuator channels
+- component selection and subsystem interfacing
 
-No part of the SunnyPro electrical schematic set presented here was supplied as a pre-designed course schematic.
+The original working calculation sheets and purchasing BOM used during project development are not part of this public portfolio release. The repository therefore does not present reconstructed numbers as if they were original project records.
 
-## Design Scope
+## Design structure
 
-The electrical system is organized into hierarchical KiCad sheets covering:
+The system is organized into hierarchical KiCad sheets covering:
 
 - MCU and signal interfaces
 - AC input protection and DC power distribution
-- Bottom and top heating systems
-- Conveyor transportation
-- Storage and egg-breaking actuators
-- Rotating plate and load-cell measurement
-- Oil-pump and HMI/peripheral interfaces
+- bottom and top heating systems
+- conveyor transportation
+- storage and egg-breaking actuators
+- rotating plate and load-cell measurement
+- oil-pump and HMI/peripheral interfaces
 
-## Temperature Measurement and Heater Control
+## Temperature measurement and heater control
 
-The temperature-measurement and heater-control electronics integrate **PT100 RTDs with MAX31865 interfaces** for temperature acquisition and connect them to the STM32 control system.
+PT100 RTDs are interfaced through **MAX31865** devices for temperature acquisition. Heater control uses solid-state relays with the protection and low-voltage control interfaces shown in the schematic set.
 
-The heating circuits combine:
+## Power architecture
 
-- **PT100 / MAX31865 temperature measurement**
-- **SSR-controlled mains heaters**
-- Fusing and thermal protection
-- Low-voltage MCU control interfacing
+The published power design uses a protected mains input and a **Mean Well IRM-60-24** isolated supply as the main 24 V DC source. The system then distributes 24 V, 12 V, 6 V, 5 V and 3.3 V rails according to subsystem requirements.
 
-This required coordinating low-voltage sensor electronics with higher-power loads and protection circuitry.
+The rail structure and published protection approach are summarized in [`docs/power-architecture.md`](docs/power-architecture.md).
 
-## Power Architecture
+## Motion, sensors and actuators
 
-The system power distribution uses a protected mains input and several derived DC rails:
-
-- **24 V** main DC rail
-- **12 V, 6 V and 5 V** regulated rails
-- **3.3 V** logic rail
-- RCCB, MCB, individual fuses and emergency-stop protection
-
-The work included power-demand calculations, rail allocation, protection choices and component selection.
-
-## Motion, Sensors and Actuators
-
-The design integrates several sensing and actuation technologies:
+The design integrates:
 
 - NEMA17 stepper motor with **TB6600** driver
-- Step/direction/enable control and encoder feedback
+- step/direction/enable control and encoder feedback
 - 28BYJ-48 stepper with **ULN2003A** driver
-- **Load cell + HX711** measurement interface
+- **load cell + HX711** measurement interface
 - IR sensors and home switches
-- Solenoid and pump channels using MOSFET drivers with flyback protection
-- Servo actuation
-- Serial HMI interface
+- MOSFET-switched solenoid and pump channels with flyback protection
+- servo actuation
+- serial HMI interface
 
-## MCU Integration
+A compact component overview is available in [`docs/key-components.md`](docs/key-components.md).
 
-The **STM32H743** is the central interface between sensing, motion, heating and HMI subsystems. I planned the MCU signal allocation and subsystem interfaces across the complete electrical schematic set.
+## MCU integration
 
-## Project Files
+The **STM32H743** is the central interface between sensing, motion, heating and HMI subsystems. The schematic set documents the signal allocation and electrical interfaces between those subsystems.
+
+## Project files
 
 ```text
 hardware/
@@ -117,18 +102,18 @@ exports/
 └── SunnyPro-schematics.pdf
 
 docs/
-└── design-summary.md
+├── design-summary.md
+├── power-architecture.md
+└── key-components.md
 
 images/
 └── architecture.svg
 ```
 
-Every electrical schematic listed above was designed by me. In the sanitized public source, the KiCad schematic title blocks identify **Ahmed Yehia** as the author, while private identifiers are omitted.
+The portfolio scope is **electrical architecture and schematic design**; no SunnyPro PCB-layout authorship is claimed here.
 
-The portfolio scope of this repository is **electrical architecture and schematic design**; no SunnyPro PCB-layout authorship is claimed here.
+Per-user KiCad state files, autosaves, backup/cache files and operating-system metadata are excluded from version control.
 
-Per-user KiCad state files (`*.kicad_prl`), autosaves, backup/cache files and operating-system metadata are excluded because they are not part of the electrical design and can contain local-machine state.
+## Tools and skills
 
-## Tools and Skills
-
-`KiCad` · `STM32H743` · `Hierarchical Schematic Design` · `PT100 / MAX31865` · `Temperature Measurement` · `Power Distribution` · `Sensors` · `Motor Drivers` · `MOSFET Drivers` · `SSRs` · `Load Cells` · `Embedded Hardware Interfaces` · `Component Selection` · `Power Calculations` · `BOM Development`
+`KiCad` · `STM32H743` · `Hierarchical Schematic Design` · `PT100 / MAX31865` · `Temperature Measurement` · `Power Distribution` · `Sensors` · `Motor Drivers` · `MOSFET Drivers` · `SSRs` · `Load Cells` · `Embedded Hardware Interfaces` · `Component Selection`
